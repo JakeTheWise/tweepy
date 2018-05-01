@@ -54,6 +54,7 @@ class API(object):
         self.api_root = api_root
         self.search_root = search_root
         self.upload_root = upload_root
+        self.path = path
         self.cache = cache
         self.compression = compression
         self.retry_count = retry_count
@@ -1210,7 +1211,7 @@ class API(object):
         """
         return bind_api(
             api=self,
-            path='/search/tweets.json',
+            path=self.path,
             payload_type='search_results',
             allowed_param=['q', 'lang', 'locale', 'since_id', 'geocode',
                            'max_id', 'since', 'until', 'result_type',
