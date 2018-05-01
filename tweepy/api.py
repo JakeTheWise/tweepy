@@ -18,7 +18,7 @@ from tweepy.utils import list_to_csv
 class API(object):
     """Twitter API"""
 
-    def __init__(self, auth_handler=None,
+    def __init__(self, auth_handler=None, path='/search/tweets.json',
                  host='api.twitter.com', search_host='search.twitter.com',
                  upload_host='upload.twitter.com', cache=None, api_root='/1.1',
                  search_root='', upload_root='/1.1', retry_count=0,
